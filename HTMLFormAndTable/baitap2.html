@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 2</title>
+</head>
+<body>
+   <fieldset style="width: 400px;">
+    <table>
+        <tr>
+            <style>
+                th.right {
+                    text-align: right;
+                }
+            </style>
+            <th colspan="4"> SỞ THÍCH CỦA BẠN</th>
+        </tr>
+        <tr>
+            <th class="right">Họ và tên</th>
+            <td colspan="3"><input type="text" name="yourname" size="24"></td>
+        </tr>
+        <tr>
+            <th class="right">Email</th>
+            <td colspan="3"><input type="email" name="email" size="15"></td>
+        </tr>
+        <tr>
+            <style>
+                th.top {
+                    vertical-align: top;
+                    text-align: right;
+                }
+            </style>
+            <th rowspan="4" class="top">Sở thích</th>
+            <td><input type="checkbox" name="hobby">Thể thao</td>
+            <td><input type="checkbox" name="hobby">Âm nhạc</td>
+            <td><input type="checkbox" name="hobby">Đọc sách</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="hobby">Lướt web</td>
+            <td><input type="checkbox" name="hobby">Chơi game</td>
+            <td><input type="checkbox" name="hobby">Điện ảnh</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="hobby">Du lịch</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Gửi thông tin"></td>
+            <td><input type="reset" value="Nhập lại"></td>
+        </tr>
+       </table> 
+   </fieldset>
+   <br>
+   <br>
+   <br>
+   <fieldset style="width: 500px;">
+    <table>
+        <style>
+            th.left {
+                text-align: left;
+                vertical-align: top;
+            }
+        </style>
+        <tr>
+            <th colspan="3">ĐĂNG KÝ HỌC VIÊN</th>
+        </tr>
+        <tr>
+            <th class="left">Họ và tên</th>
+            <td colspan="2"><input type="text" name="name" size="30"></td>
+        </tr>
+        <tr>
+            <th class="left">Ngày sinh</th>
+            <td colspan="2"><input type="text" name="birthday" size="15"></td>
+        </tr>
+        <tr>
+            <th class="left"    >Giới tính</th>
+            <td><input type="radio" name="gender">Nam</td>
+            <td><input type="radio" name="gender">Nữ</td>
+        </tr>
+        <tr>
+            <th class="left">Địa chỉ</th>
+            <td colspan="2"><textarea name="Địa chỉ" id="" cols="25" rows="3"></textarea></td>
+        </tr>
+        <tr>
+            <th class="left">Chọn lớp</th>
+            <td colspan="2">
+                <select>
+                    <option value="">-Chọn lớp-</option>
+                    <option value="">A1</option>
+                    <option value="">A2</option>
+                    <option value="">A3</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th class="left">Email</th>
+            <td colspan="2"><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <th class="left">Điện thoại</th>
+            <td colspan="2"><input type="tel" name="pnumber"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Đăng ký">
+            </td>
+            <td >
+                <input type="reset" value="Nhập lại">
+            </td>
+        </tr>
+    </table>
+   </fieldset>
+</body>
+</html>
