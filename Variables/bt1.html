@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 1</title>
+</head>
+<body>
+    <script>
+        let inputPhysics;
+        let inputChemistry;
+        let inputBiological;
+        inputPhysics = prompt("Enter the Physics");
+        inputChemistry = prompt("Enter the Chemistry");
+        inputBiological = prompt("Enter the Biological");
+        let Physics = parseInt(inputPhysics);
+        let Chemistry = parseInt(inputChemistry);
+        let Biological = parseInt(inputBiological);
+        let Tổng = Physics + Chemistry + Biological;
+        let tb = (Physics + Chemistry + Biological)/3;
+        document.write('Vật lý = ' + inputPhysics);
+        document.write('<br/>');
+        document.write('Hoá học = ' + inputChemistry);
+        document.write('<br/>');
+        document.write('Sinh học =' + inputBiological);
+        document.write('<br/>');
+        document.write('Tổng = ' + Tổng);
+        document.write('<br/>');
+        document.write('Điểm tb = ' + tb);
+    </script>
+</body>
+</html>
