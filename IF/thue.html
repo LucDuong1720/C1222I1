@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuế thu nhập cá nhân</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Thu nhập</td>
+            <td><input type="number" id="a"></td>
+        </tr>
+        <tr>
+            <td>Thuế</td>
+            <td><input type="number" id="b"></td>
+        </tr>
+        <tr>
+            <td><button onclick="thue()">Thành tiền</button></td>
+        </tr>
+    </table>
+    <script>
+        function thue() {
+            let a = +document.getElementById("a").value;
+            let b = +document.getElementById("b").value;
+            if (a <= 5){
+                document.getElementById("b").value = a * (5/100);
+            }
+            if (a < 5, a <= 10){
+                document.getElementById("b").value = a * (10/100) - 0.25;
+            }
+            if (a < 10, a <= 18){
+                document.getElementById("b").value = a * (15/100) - 0.75;
+            }
+            if (a < 18, a <= 32){
+                document.getElementById("b").value = a * (20/100) - 1.65;
+            }
+            if (a < 32, a <= 52){
+                document.getElementById("b").value = a * (25/100) - 3.25;
+            }
+            if (a < 52, a <= 80){
+                document.getElementById("b").value = a * (30/100) - 5.85;
+            }
+            if (a > 80){
+                document.getElementById("b").value = a * (35/100) - 9.85;
+            }
+        }
+    </script>
+</body>
+</html>
