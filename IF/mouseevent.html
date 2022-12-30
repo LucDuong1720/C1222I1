@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse event</title>
+</head>
+<body>
+    <form action="">
+        <img id="ball" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" style="width: 30%;">
+        <p>Click button below to move the image to right</p>
+        <input type="button" value="Click me" onclick="moveRight();">
+    </form>
+    <script>
+        let bal = null;
+        bal = document.getElementById('ball');
+        function init() {
+            bal = document.getElementById('ball');
+            bal.style.position = 'relative';
+            bal.style.left = '0px';
+        }
+        function moveRight() {
+            bal.style.left = parseInt(bal.style.left) + 10 + 'px';
+        }
+        window.onload = init;
+    </script>
+</body>
+</html>
