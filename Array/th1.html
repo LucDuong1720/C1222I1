@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo và thao tác với mảng</title>
+</head>
+<body>
+    <p>Sample Screen</p>
+    <input type="text" id="t1">
+    <input type="button" id="bt1" value="Add" onclick="add()">
+    <input type="button" id="bt2" value="Display" onclick="display()">
+    <div id="result"></div>
+    <script>
+        let x = 0;
+        let array = Array();
+        function add() {
+            array[x] = document.getElementById("t1").value;
+            alert("Element: " + array[x] + " Added at index " + x);
+            x++;
+            document.getElementById("t1").value = "";
+        }
+        function display() {
+            let e = "<hr/>";
+            for (i = 0; i < array.length; i++) {
+                e += "Element " + i + " = " + array[i] + "<br/>";
+            }
+            document.getElementById("result").innerHTML = e;
+        }
+
+    </script>
+</body>
+</html>
