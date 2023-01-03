@@ -44,18 +44,26 @@ console.log("totalTriangleDown2: " + totalTriangleDown2);
 let totalduongall = 0;
 let totaltrong = 0;
 for (let i=0;i<arr.length;i++){
-    for(let j=0;j<arr[1].length;j++) {
+    for(let j=0;j<arr.length;j++) {
         totalduongall += arr[i][j];
     }
 }
-console.log("totalduongall: " + totalduongall);
 
 for (let i=1; i<arr.length-1; i++){
     for (let j=1; j<arr.length-1;j++) {
         totaltrong += arr[i][j];
     }
-}console.log("totaltrong: " + totaltrong);
+}
 console.log("totalduongvien: " + (totalduongall - totaltrong));
+
+let totalTriangleUp = 0;
+for(let i=0; i<arr.length; i++){
+    for (let j=0 ;j<arr[i].length-4+i;j++) {
+        totalTriangleUp += arr[i][j];
+    }
+}
+console.log("totalTriangleUp: " + totalTriangleUp);
+
     </script>
 </body>
 </html>
