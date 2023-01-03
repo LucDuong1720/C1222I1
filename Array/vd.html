@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [];
+arr[0] = [2,3,4,5,7];
+arr[1] = [4,5,4,1,7];
+arr[2] = [2,1,6,2,7];
+arr[3] = [2,3,3,7,7];
+arr[4] = [1,5,4,7,9];
+
+let str = "";
+for(let i=0;i<arr.length;i++){
+    for(let j=0;j<arr[0].length;j++){
+       str += arr[i][j];
+    }
+    str += "\n";
+}
+console.log(str);
+
+let total = 0
+let totalTriangleDown = 0;
+for(let i=0;i<arr.length;i++){
+    for(let j=0;j<=arr[i].length-1-i;j++){
+        totalTriangleDown += arr[i][j];
+    }
+}
+console.log("totalTriangleDown: " + totalTriangleDown);
+
+let totalTriangleDown2 = 0;
+for(let i=0;i<arr.length;i++){
+    for(let j=i;j<arr[i].length;j++){
+        totalTriangleDown2 += arr[i][j];
+    }
+}
+console.log("totalTriangleDown2: " + totalTriangleDown2);
+    </script>
+</body>
+</html>
