@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ điển</title>
+</head>
+<body>   
+    <label for="string">Nhập từ: </label>
+    <input type="text" name="" id="word" placeholder="Word">
+    <button onclick="trans()">Dịch</button>
+    <p id="result"></p>
+    <script>
+        function trans() {
+            let arreng = ["pencil", "apple", "red", "blue", "yellow", "black", "white"];
+            let arrvie = ["bút chì", "táo", "đỏ", "xanh", "vàng", "đen", "trắng"];
+            let search = document.getElementById("word").value;
+            let result = "";
+            let index_eng = 0;
+            for (let i = 0; i < arreng.length; i++) {
+                if (search == arreng[i]) {
+                    index_eng = i;
+                    for (let j = 0; j < arrvie.length; j++) {
+                        if (index_eng == j) {
+                            result = arrvie[j];
+                        }
+                    }
+                }
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
