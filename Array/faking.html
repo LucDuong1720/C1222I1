@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faking Text</title>
+</head>
+<body onload="fake()" style="text-align:center;">
+
+        <h1>Type anything slowly</h1>
+        <form action="">
+            <textarea name="" id="area" cols="50" rows="20"></textarea>
+        </form>
+    <script>
+            let array = [];
+            let str = "";
+            array[1] = 'L';
+            array[2] = 'O';
+            array[3] = 'V';
+            array[4] = 'E';
+            array[5] = ' ';
+            array[6] = 'Y';
+            array[7] = 'O';
+            array[8] = 'U';
+            array[9] = ' ';
+            array[10] = 'T';
+            array[11] = 'O';
+            array[12] = ' ';
+            array[13] = 'M';
+            array[14] = 'U';
+            array[15] = 'C';
+            array[16] = 'H';
+            array[17] = '!';
+
+    function fake()
+    {
+        let text = document.getElementById("area").value;
+        for(let i = 1; i <= text.length; i++)
+        {
+            str = str + array[i];
+            if (i === 17)
+            {
+                str = "";
+            }
+        }
+        document.getElementById("area").value = str;
+        str = "";
+        setTimeout("fake()", 1);
+    }
+        
+    </script>
+</body>
+</html>
