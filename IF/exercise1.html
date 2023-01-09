@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise1</title>
+</head>
+
+<body>
+    <p>Bài 1: nhập vào 2 số a và b, và kiểm tra a có chia hết cho b không?</p>
+    <form action="">
+        <input type="number" id="a">
+        <input type="number" id="b">
+        <input type="button" value="Check" onclick="check1()">
+        <p id="result"></p>
+    </form>
+    <p>Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.</p>
+    <input type="number" id="age">
+    <input type="button" value="Check" onclick="check2()">
+    <p id="result2"></p>
+    <p>Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0
+    </p>
+    <input type="number" id="integer">
+    <input type="button" value="Check" onclick="check3()">
+    <p id="result3"></p>
+    <p>Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</p>
+    <input type="number" id="n1" placeholder="a">
+    <input type="number" id="n2" placeholder="b">
+    <input type="number" id="n3" placeholder="c">
+    <input type="button" value="Check" onclick="check4()">
+    <p id="result4"></p>
+    <p>Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</p>
+    <input type="number" id="kt1" placeholder="Điểm kiểm tra">
+    <input type="number" id="kt2" placeholder="Điểm giữa kỳ">
+    <input type="number" id="kt3" placeholder="Điểm cuối kỳ">
+    <input type="button" value="Rank" onclick="check5()">
+    <p id="result5"></p>
+    <script>
+        function check1() {
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            if (a % b == 0) {
+                document.getElementById("result").innerHTML = "a chia hết cho b";
+            } else {
+                document.getElementById("result").innerHTML = "a không chia hết cho b";
+            }
+        }
+
+        function check2() {
+            let age = +document.getElementById("age").value;
+            if (age < 16 && age > 0) {
+                document.getElementById("result2").innerHTML = "Chưa đủ tuổi để học lớp 10"
+            } else if (age >= 16) {
+                document.getElementById("result2").innerHTML = "Đủ tuổi để học lớp 10"
+            } else {
+                document.getElementById("result2").innerHTML = "Lỗi"
+            }
+        }
+
+        function check3() {
+            let number = document.getElementById("integer").value;
+            if (number % 1 == 0 && number > 0) {
+                document.getElementById("result3").innerHTML = "Số nguyên dương"
+            } else if (number % 1 == 0 && number < 0) {
+                document.getElementById("result3").innerHTML = "Số nguyên âm"
+            } else {
+                document.getElementById("result3").innerHTML = "Không phải số nguyên"
+            }
+        }
+
+        function check4() {
+            let a = document.getElementById("n1").value;
+            let b = document.getElementById("n2").value;
+            let c = document.getElementById("n3").value;
+            if (a % 1 == 0 && b % 1 == 0 && c % 1 == 0) {
+                if (a == b & b == c) {
+                    document.getElementById("result4").innerHTML = "3 số bằng nhau"
+                }
+                else if (a > b) {
+                    if (a > c) {
+                        document.getElementById("result4").innerHTML = "a là số lớn nhất";
+                    } else {
+                        document.getElementById("result4").innerHTML = "c là số lớn nhất";
+                    }
+                } else {
+                    if (b < c) {
+                        document.getElementById("result4").innerHTML = "c là số lớn nhất";
+                    }
+                    else {
+                        document.getElementById("result4").innerHTML = "b là số lớn nhất";
+                    }
+                }
+            } else {
+                document.getElementById("result4").innerHTML = "Lỗi";
+            }
+        }
+
+        function check5() {
+            let a = +document.getElementById("kt1").value;
+            let b = +document.getElementById("kt2").value;
+            let c = +document.getElementById("kt3").value;
+            let average = (a + b * 2 + c * 3) / 5;
+            if (a <= 10 & a >= 0 && b <= 10 & b >= 0 && c <= 10 & c >= 0) {
+                if (average >= 0 && average < 5) {
+                    document.getElementById("result5").innerHTML = "Học lực yếu";
+                } else if (average >= 5 && average < 6.5) {
+                    document.getElementById("result5").innerHTML = "Học lực trung bình";
+                } else if (average >= 6.5 && average < 8) {
+                    document.getElementById("result5").innerHTML = "Học lực khá";
+                } else{
+                    document.getElementById("result5").innerHTML = "Học lực giỏi";
+                } 
+            }
+            else {
+                    document.getElementById("result5").innerHTML = "Nhập lại số";
+                }
+            }
+        
+
+
+    </script>
+</body>
+
+</html>
