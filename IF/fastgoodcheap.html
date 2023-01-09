@@ -41,20 +41,20 @@
             left: 4px;
             bottom: 4px;
             background-color: white;
-            -webkit-transition: .4s;
-            transition: .4s;
+            -webkit-transition: .3s;
+            transition: .3s;
         }
 
         input:checked+.good {
-            background-color: rgb(12, 209, 94);
+            background-color: rgb(2, 255, 10);
         }
 
         input:checked+.cheap {
-            background-color: rgb(54, 16, 158);
+            background-color: rgb(37, 72, 243);
         }
 
         input:checked+.fast {
-            background-color: rgb(255, 9, 9);
+            background-color: rgb(255, 0, 0);
         }
 
         input:checked+.slider:before {
@@ -63,7 +63,6 @@
             transform: translateX(26px);
         }
 
-        /* Rounded sliders */
         .slider.round {
             border-radius: 34px;
         }
@@ -81,7 +80,7 @@
 <body>
 
     <label class="switch">
-        <input type="checkbox" id="g" onclick=switchGood() >
+        <input type="checkbox" id="good" onclick=switchGood() >
         <span class="slider round good"></span>
     </label>
     <span>
@@ -89,7 +88,7 @@
     </span>
     <br />
     <label class="switch">
-        <input type="checkbox" id="c" onclick=switchCheap()>
+        <input type="checkbox" id="cheap" onclick=switchCheap()>
         <span class="slider round cheap"></span>
     </label>
     <span>
@@ -97,7 +96,7 @@
     </span>
     <br />
     <label class="switch">
-        <input type="checkbox" id="f" onclick=switchFast()>
+        <input type="checkbox" id="fast" onclick=switchFast()>
         <span class="slider round fast"></span>
     </label>
     <span>
@@ -106,41 +105,41 @@
     <script>
 
         function switchGood() {
-            var isGood = document.getElementById("g").checked;
-            var isCheap = document.getElementById("c").checked;
-            var isFast = document.getElementById("f").checked;
+            let isGood = document.getElementById("good").checked;
+            let isCheap = document.getElementById("cheap").checked;
+            let isFast = document.getElementById("fast").checked;
             console.log(isGood,isCheap,isFast);
             if (isCheap && isFast) {
                 if (Math.random() < 0.5) {
-                    document.getElementById("c").checked = false;
+                    document.getElementById("cheap").checked = false;
                 } else {
-                    document.getElementById("f").checked = false;
+                    document.getElementById("fast").checked = false;
                 }
             }
         }
         function switchCheap() {
-            var isGood = document.getElementById("g").checked;
-            var isCheap = document.getElementById("c").checked;
-            var isFast = document.getElementById("f").checked;
+            let isGood = document.getElementById("good").checked;
+            let isCheap = document.getElementById("cheap").checked;
+            let isFast = document.getElementById("fast").checked;
             console.log(isGood,isCheap,isFast);
             if (isGood && isFast) {
                 if (Math.random() < 0.5) {
-                    document.getElementById("g").checked = false
+                    document.getElementById("good").checked = false
                 } else {
-                    document.getElementById("f").checked = false
+                    document.getElementById("fast").checked = false
                 }
             }
         }
         function switchFast() {
-            var isGood = document.getElementById("g").checked;
-            var isCheap = document.getElementById("c").checked;
-            var isFast = document.getElementById("f").checked;
+            let isGood = document.getElementById("good").checked;
+            let isCheap = document.getElementById("cheap").checked;
+            let isFast = document.getElementById("fast").checked;
             console.log(isGood,isCheap,isFast);
             if (isGood && isCheap) {
                 if (Math.random() < 0.5) {
-                    document.getElementById("c").checked = false
+                    document.getElementById("cheap").checked = false
                 } else {
-                    document.getElementById("f").checked = false
+                    document.getElementById("fast").checked = false
                 }
             }
         }
