@@ -28,9 +28,9 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: #ccc;
-            -webkit-transition: .4s;
-            transition: .4s;
+            background-color: rgb(174, 172, 172);
+            -webkit-transition: .3s;
+            transition: .3s;
         }
 
         .slider:before {
@@ -40,7 +40,7 @@
             width: 26px;
             left: 4px;
             bottom: 4px;
-            background-color: white;
+            background-color: rgb(241, 237, 237);
             -webkit-transition: .3s;
             transition: .3s;
         }
@@ -108,7 +108,6 @@
             let isGood = document.getElementById("good").checked;
             let isCheap = document.getElementById("cheap").checked;
             let isFast = document.getElementById("fast").checked;
-            console.log(isGood,isCheap,isFast);
             if (isCheap && isFast) {
                 if (Math.random() < 0.5) {
                     document.getElementById("cheap").checked = false;
@@ -121,7 +120,6 @@
             let isGood = document.getElementById("good").checked;
             let isCheap = document.getElementById("cheap").checked;
             let isFast = document.getElementById("fast").checked;
-            console.log(isGood,isCheap,isFast);
             if (isGood && isFast) {
                 if (Math.random() < 0.5) {
                     document.getElementById("good").checked = false
@@ -134,12 +132,11 @@
             let isGood = document.getElementById("good").checked;
             let isCheap = document.getElementById("cheap").checked;
             let isFast = document.getElementById("fast").checked;
-            console.log(isGood,isCheap,isFast);
             if (isGood && isCheap) {
                 if (Math.random() < 0.5) {
                     document.getElementById("cheap").checked = false
                 } else {
-                    document.getElementById("fast").checked = false
+                    document.getElementById("good").checked = false
                 }
             }
         }
