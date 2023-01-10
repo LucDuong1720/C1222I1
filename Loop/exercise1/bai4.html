@@ -14,13 +14,13 @@
             if (n < 2) {
                 return 1;
             } else {
-                return fibonancci(n-2) + fibonancci(n-1);
+                return fibonancci(n - 2) + fibonancci(n - 1);
             }
         }
         function check() {
             let n = 2;
             while (fibonancci(n) % 5 !== 0) {
-                n+=1;
+                n += 1;
             }
             document.getElementById("result").innerHTML = `${fibonancci(n)}`;
         }
