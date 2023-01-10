@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+
+<body>
+    <p>Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.</p>
+    <p id="result"></p>
+    <script>
+        let number = "";
+        let n1 = 0; 
+        let n2 = 1; 
+        let nextTerm;
+        let n3
+
+        console.log('Fibonacci Series:');
+
+        for (let i = 1; i <= 20; i++) {
+            number += n1 + "<br>";
+            nextTerm = n1 + n2;
+            n1 = n2;
+            n2 = nextTerm;
+        }
+        document.getElementById("result").innerHTML = number;
+    </script>
+</body>
+
+</html>
