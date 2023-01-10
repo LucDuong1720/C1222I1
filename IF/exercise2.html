@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise2</title>
+</head>
+<body>
+    <p>Bài 1: Chuyển từ độ C sang độ F.</p>
+    <input type="number" id="temperature" placeholder="oC">
+    <input type="button" value="Change" onclick="check1()">
+    <p id="output"></p>
+
+    <p>Bài 2: Chuyển từ mét sang feet.</p>
+    <input type="number" id="meter">
+    <input type="button" value="Change" onclick="check2()">
+    <p id="feet"></p>
+
+    <p>Bài 3: Tính diện tích hình vuông khi biết cạnh a.</p>
+    <input type="number" id="a" placeholder="Cạnh a">
+    <input type="button" value="Tính" onclick="check3()">
+    <p id="s"></p>
+
+    <p>Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.</p>
+    <input type="number" id="a1" placeholder="Cạnh a">
+    <input type="number" id="b1" placeholder="Cạnh b">
+    <input type="button" value="Tính" onclick="check4()">
+    <p id="hcn"></p>
+
+    <p>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</p>
+    <input type="number" id="a5" placeholder="Cạnh a">
+    <input type="number" id="b5" placeholder="Cạnh b">
+    <input type="button" value="Tính" onclick="check5()">
+    <p id="triangle"></p>
+
+    <p>Bài 6: Tính phương trình bậc 1.</p>
+    <input type="number" id="a6" placeholder="a">
+    <input type="number" id="b6" placeholder="b">
+    <input type="button" value="Tính" onclick="check6()">
+    <p id="x"></p>
+
+    <p>Bài 7: Giải phương trình bậc 2.</p>
+    <input type="number" id="a7" placeholder="a">
+    <input type="number" id="b7" placeholder="b">
+    <input type="number" id="c7" placeholder="c">
+    <input type="button" value="Tính" onclick="check7()">
+    <p id="x7"></p>
+
+    <p>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</p>
+    <input type="number" id="age" placeholder="Tuổi">
+    <input type="button" value="Check" onclick="check8()">
+    <p id="result"></p>
+
+    <p>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác.</p>
+    <input type="number" id="a9" placeholder="a">
+    <input type="number" id="b9" placeholder="b">
+    <input type="number" id="c9" placeholder="c">
+    <input type="button" value="Tính" onclick="check9()">
+    <p id="result9"></p>
+
+    <p>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</p>
+    <input type="number" id="a12" placeholder="Số tiền vay">
+    <input type="number" id="b12" placeholder="Lãi suất tháng">
+    <input type="number" id="c12" placeholder="Thời hạn vay">
+    <input type="button" value="Tính" onclick="check12()">
+    <p id="result12"></p>
+
+</body>
+<script>
+    function check1() {
+        let t = +document.getElementById("temperature").value;
+        let f = 0;
+        if (t >= 0) {
+            f = t * (9 / 5) + 32;
+            document.getElementById("output").innerHTML = f + " oF";
+        } else {
+            document.getElementById("output").innerHTML = "Lỗi";
+        }
+    }
+
+    function check2() {
+        let m = +document.getElementById("meter").value;
+        let ft = 0;
+        if (m >= 0) {
+            ft = m * 3.2808;
+            document.getElementById("feet").innerHTML = ft +" feet";
+        } else {
+            document.getElementById("feet").innerHTML = "Lỗi";
+        }
+    }
+
+    function check3() {
+        let a = +document.getElementById("a").value;
+        let s = 0;
+        if (a >= 0) {
+            s = a * a;
+            document.getElementById("s").innerHTML = "Diện tích hình vuông = " + s;
+        } else {
+            document.getElementById("s").innerHTML = "Lỗi";
+        }
+    }
+
+    function check4() {
+        let a = +document.getElementById("a1").value;
+        let b = +document.getElementById("b1").value;
+        let s = 0;
+        if(a >= 0 && b >= 0) {
+            s = a * b;
+            document.getElementById("hcn").innerHTML = "Diện tích hình chữ nhật = " + s;
+        } else {
+            document.getElementById("hcn").innerHTML = "Lỗi";
+        }
+    }
+
+    function check5() {
+        let a = +document.getElementById("a5").value;
+        let b = +document.getElementById("b5").value;
+        let c = 0;
+        if(a >= 0 && b >= 0) {
+            c = Math.sqrt((a * a) + (b * b));
+            document.getElementById("triangle").innerHTML = "c =" + c;
+        }else {
+            document.getElementById("triangle").innerHTML = "Lỗi";
+        }
+    }
+
+    function check6() {
+        let a = document.getElementById("a6").value;
+        let b = document.getElementById("b6").value;
+        let x = 0;
+        if(a == 0 && b == 0) {
+            document.getElementById("x").innerHTML = "Phương trình vô số nghiệm";
+        }else if(a == 0) {
+            document.getElementById("x").innerHTML = "Phương trình vô nghiệm";
+        }else {
+            x = -b / a;
+            document.getElementById("x").innerHTML = `Phương trình ${a}x + ${b} = 0 có nghiệm x = ${x}`;
+        }
+    }
+
+    function check7() {
+        let a = document.getElementById("a7").value;
+        let b = document.getElementById("b7").value;
+        let c = document.getElementById("c7").value;
+        let delta = b*b - (4*a*c);
+        let x1 = 0;
+        let x2 = 0;
+        if (delta < 0) {
+            document.getElementById("x7").innerHTML = "Phương trình vô nghiệm";
+        } else if (delta = 0) {
+            x1 = -b/(2 * a);
+            document.getElementById("x7").innerHTML = `Phương trình có nghiệm kép là ${x1}`;
+        } else {
+            x1 =(-b-Math.sqrt(delta))/(2*a);
+            x2 =(-b+Math.sqrt(delta))/(2*a);
+            document.getElementById("x7").innerHTML = `Phương trình có 2 nghiệm phân biệt là ${x1} và ${x2}`;
+        }
+    }
+
+    function check8() {
+        let number = +document.getElementById("age").value;
+        if (number % 1 == 0 && number < 120 && number > 0) {
+            document.getElementById("result").innerHTML = `${number} là tuổi`;
+        } else {
+            document.getElementById("result").innerHTML = `Lỗi`;
+        }
+    }
+
+    function check9() {
+        let a = document.getElementById("a9").value;
+        let b = document.getElementById("b9").value;
+        let c = document.getElementById("c9").value;
+        if (a > 0 && b > 0 && c > 0) {
+            if (a + b > c || a + c > b || b + c > a) {
+                document.getElementById("result9").innerHTML = `Là tam giác`;
+            } else {
+                document.getElementById("result9").innerHTML = `Lỗi`;
+            }
+        }else {
+            document.getElementById("result9").innerHTML = `Lỗi`;
+        }
+    }
+
+    function check12() {
+        let a = +document.getElementById("a12").value;
+        let b = +document.getElementById("b12").value;
+        let c = +document.getElementById("c12").value;
+        let interest = 0;
+        if (a > 0 && b > 0 && c > 0) {
+            interest = a * (b/100) / c;
+            document.getElementById("result12").innerHTML = `Lãi suất hàng tháng ${interest}`;
+        } else {
+            document.getElementById("result12").innerHTML = `Lỗi`;
+        }
+    }
+</script>
+</html>
