@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8</title>
+</head>
+
+<body>
+    <button onclick="play()">Chơi</button>
+    <script>
+        function play() {
+            let num = +prompt("Khoảng lớn nhất")
+            let num_ran = Math.floor(Math.random() * num);
+            console.log(num_ran);
+            let num_check = +prompt ("Nhập số bạn đoán");
+            let count = 0;
+            while (num_check !== num_ran) {
+                count++;
+                if (count == 4) {
+                    alert("Bạn hết số lần đoán")
+                    break;
+                } else if (num_check < num_ran) {
+                    alert("Lớn hơn");
+                } else {
+                    alert ("Bé hơn")
+                }
+                num_check = prompt ("Nhập số bạn đoán");   
+            }
+            if (count == 4) {
+                document.write("Bạn đã hết lượt đoán")
+            } else {
+                document.write("Bạn đã đoán đúng")
+            } 
+        }
+    
+    </script>
+</body>
+
+</html>
