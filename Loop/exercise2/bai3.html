@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+
+<body>
+    <p><b>Bài 3:</b>In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau</p>
+    <h2 id="result1"></h2>
+    <h2 id="result2"></h2>
+    <h2 id="result3"></h2>
+    <h2 id="result4"></h2>
+    <script>
+        function display1() {
+            let i = 1;
+            let n = 5;
+            let triangle = '';
+            while (i <= n) {
+                for (let j = 1; j <= i; j++) {
+                    triangle += "*"
+                }
+                triangle += "<br/>";
+                i++;
+            }
+            document.getElementById("result1").innerHTML = triangle;
+        }
+
+        function display2() {
+            let i = 5;
+            let triangle = '';
+            while (i > 0) {
+                for (let j = 1; j <= i; j++) {
+                    triangle += "*"
+                }
+                triangle += "<br/>";
+                i--;
+            }
+            document.getElementById("result2").innerHTML = triangle;
+        }
+
+        function display3() {
+            var n = 5;
+            var triangle = "";
+            for (var i = 1; i <= n; i++) {
+                for (var j = 1; j <= (n - i); j++) {
+                    triangle += "&nbsp&nbsp;";
+                }
+                for (var k = 1; k <= i; k++) {
+                    triangle += '*';
+                }
+                triangle += "<br/>"
+                document.getElementById("result3").innerHTML = triangle;
+            }
+        }
+        function display4() {
+            var n = 5;
+            var triangle = "";
+            for (var i = 0; i <= n; i++) {
+                for (var j = 1; j <= i; j++) {
+                    triangle += "&nbsp&nbsp;";
+                }
+                for (var j = 5; j > i; j--) {
+                    triangle += "*";
+                }
+                triangle += "<br/>";
+            }
+            document.getElementById("result4").innerHTML = triangle;
+        }
+
+        display1();
+        display2();
+        display3();
+        display4();
+    </script>
+</body>
+
+</html>
