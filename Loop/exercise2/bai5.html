@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+
+<body>
+    <p>Bài 5: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi
+        xuất hàng tháng.</p>
+    <input type="number" id="a" placeholder="Số tiền vay">
+    <input type="number" id="b" placeholder="Lãi suất tháng">
+    <input type="number" id="c" placeholder="Thời hạn vay">
+    <input type="button" value="Tính" onclick="check()">
+    <p id="result"></p>
+    <script>
+        function check() {
+            let a = +document.getElementById("a").value;
+            let b = +document.getElementById("b").value;
+            let c = +document.getElementById("c").value;
+            let interest = 0;
+            if (a > 0 && b > 0 && c > 0) {
+                interest = a * (b / 100) / c;
+                document.getElementById("result").innerHTML = `Lãi suất hàng tháng ${interest}`;
+            } else {
+                document.getElementById("result").innerHTML = `Lỗi`;
+            }
+        }
+    </script>
+</body>
+
+</html>
