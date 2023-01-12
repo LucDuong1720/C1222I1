@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài 6</title>
 </head>
+
 <body>
     <p>Bài 6: In hình trái tim.</p>
     <h1 id="result"></h1>
     <script>
         function print() {
-            let result = '';    
+            let result = '';
             for (let i = 0; i < 6; i++) {
                 for (let j = 0; j < 7; j++) {
-                    if (i == 0 && (j == 1 || j == 2 || j == 4 || j == 5 )) {
-                        result += '*';  
+                    if (i == 0 && (j == 1 || j == 2 || j == 4 || j == 5)) {
+                        result += '*';
                     } else if (i == 1) {
-                        result += '*';  
+                        result += '*';
                     } else if (i == 2) {
                         result += '*';
                     } else if (i == 3 && (j == 1 || j == 2 || j == 3 || j == 4 || j == 5)) {
                         result += '*';
                     } else if (i == 4 && (j == 2 || j == 3 || j == 4)) {
-                        result += '*';  
+                        result += '*';
                     } else if (i == 5 && j == 3) {
                         result += '*';
-                    }else {
-                        result +=  '&nbsp&nbsp;';
-                        }
+                    } else {
+                        result += '&nbsp&nbsp;';
                     }
+                }
                 result += '<br/>'
             }
             document.getElementById("result").innerHTML = result;
@@ -37,4 +39,5 @@
         print();
     </script>
 </body>
+
 </html>
