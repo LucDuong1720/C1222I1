@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle</title>
+</head>
+<body>
+    <script>
+        let Cricle = function(radius) {
+            this.radius = radius;
+            this.getRadius = function () {
+                return radius;
+            }
+            this.getArea = function () {
+                return Math.PI * radius * radius;
+            }
+        }
+        let cricle = new Cricle(5);
+        let radius = cricle.getRadius();
+        let area = cricle.getArea();
+        alert ("radius: " + radius + "; area: " + area);
+    </script>
+</body>
+</html>
