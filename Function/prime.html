@@ -16,24 +16,21 @@
         function isPrime(num) {
             let count = 0;
             let isPrime = false;
-
             if (num == 0) {
-                alert(num + " không là số nguyên tố")
+                alert(num + " không phải là số nguyên tố")
             } else {
                 for (let i = 1; i <= num; i++) {
                     if (num % i == 0) {
                         count += 1;
                     }
                 }
-
                 if (count == 2) {
                     isPrime = true
                 }
-
                 if (isPrime) {
                     alert(num + " là số nguyên tố")
                 } else {
-                    alert(num + " không là số nguyên tố")
+                    alert(num + " không phải là số nguyên tố")
                 }
             }
         }
